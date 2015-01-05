@@ -23,7 +23,6 @@ C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\Mi
 C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\Microsoft.ScriptManager.MSAjax.dll
 C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\Microsoft.ScriptManager.WebForms.dll
 C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\MySql.Web.v20.dll
 C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\Newtonsoft.Json.dll
 C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\Owin.dll
 C:\Users\Blaz\documents\visual studio 2013\Projects\BetAFriend\BetAFriend\bin\System.Web.Optimization.dll
