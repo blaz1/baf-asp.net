@@ -1,0 +1,621 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 7, 2014, 4:28:07 PM
+    Author     : Blaz
+*/
+
+/*CSS RESET*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/*END CSS RESET*/
+
+html {
+	overflow-y: scroll;
+}
+
+.body {
+	background-color: #ECF0F1;
+	height:100%;
+}
+
+
+/*NAVIGATION*/
+
+#topNav {
+	height:3em;
+	display: block;
+	padding-left:6em;
+	/*border: 2px black solid;*/
+	background:#2F4154;
+}
+
+#topNav a {
+	color:white;
+}
+
+#homePage {
+	display: inline;
+	float:left;
+	font-size: 1.5em;
+	margin: 0.5em 0 0 1em;
+}
+
+#mainNav {
+	display:inline;
+	float:left;
+	margin: 0.75em 0 0 3em;
+	font-size: 1.2em;
+}
+
+#mainNav a {
+	margin:0 2em 0 0;
+}
+
+#profileNav {
+	float:right;
+	position: relative;
+	top:0.48em;
+	padding:0.3em;
+	font-size: 1.2em;
+	width:7em;
+}
+
+#dropdown > a {
+	position: relative;
+}
+
+#dropdown ul {
+	display:block;
+	visibility:hidden;
+	position: relative;
+	right:0.6em;
+}
+
+#dropdown ul li {
+	display:block;
+	margin: 0.5em 0 0 0;
+	
+
+}
+
+#dropdown:hover ul{
+	visibility: visible;
+	margin:0 1em 0 0;
+	background: #2F4154;
+	padding:0.4em 0.4em 0.6em 0.6em;
+	border-radius: 0.5em;	
+}
+
+#dropdown li:hover a {
+	color:red;
+}
+
+/*END NAVIGATION*/
+
+/*CROSS SIDE CLASSES*/
+
+.content {
+  	margin-left:auto;
+  	margin-right:auto;
+	width:75%;
+	display:block;
+}
+
+.content h1 {
+	position:relative;
+	display:block;
+	margin:1em 0;
+	font-size: 2em;
+}
+
+
+.floatRight {
+	float:right;
+}
+
+.floatLeft {
+	float:left;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*END CROSS SIDE CLASSES*/
+
+/*MAIN PAGE*/
+
+#mainPageDesc {
+	position: relative;
+	font-size: 1.2em;
+	margin:1em 0 0 0;
+}
+
+#mainPageLinks {
+	position:relative;
+	margin:3em auto;
+	/*border: 2px black solid;*/
+	width:15em;
+	font-size:1.3em;
+}
+
+#mainPageLinks a {
+	display:inline-block;
+	padding:0.5em;
+	background-color:#1ABC9C;
+	border-radius: 0.5em;
+}
+
+#mainPageLinks p {
+	display:inline-block;
+	position:relative;
+	left:3.2em;
+}
+
+#mainPageLinks a:visited {
+	color:black;
+}
+
+#mainPageLinks #browseOnly {
+	margin: 0 auto;
+	display:block;
+	width:3em;
+}
+
+#mainPageStats {
+	display:block;
+	position:relative;
+	height:20em;
+	/*border: 2px black solid;*/
+}
+
+#mainPageStats h2 {
+	text-align:center;
+	font-size:2em;
+	margin-bottom:0.5em;
+}
+
+.betSummary {
+	margin-bottom:1em;
+}
+
+.betSummary h3 {
+	font-size:1.3em;
+	float:left;
+	/*border:2px black solid;*/
+	width:75%;
+	margin-bottom:0.2em;
+}
+
+.betSummary .username {
+	float: left;
+	text-align:right;
+	height:1.75em;
+	width:24%;
+}
+
+.betSummary p {
+	font-size:0.9em;
+	color:gray;
+}
+
+/*END MAIN PAGE*/
+
+/*START BROWSE BETS*/
+
+input#searchBets {
+	position:relative;
+	display:block;
+	float:left;
+	padding:0.2em;	
+	margin-right:0.5em;
+	width:40%;
+	font-size:1em;
+}
+
+input#searchBets:hover, input#searchBets:focus {
+	background-color: #FFF0E6;
+}
+
+#searchBetsButton {
+	float:left;
+	height:1.75em;
+	padding:0.1em 0.2em -0.2em 0.2em;
+	font-size: 1em;
+}
+
+#searchBetsResult, #MainContent_BrowseBetsGridView {
+	/*border:2px black solid;*/
+	border-collapse: collapse; 
+	position:relative;
+	float:left;
+	display:block;
+    width:100%;
+	margin-top:1em;
+}
+
+#searchBetsResult thead, #MainContent_BrowseBetsGridView th {
+	font-size:1.5em;
+	font-weight: bold;
+    /*width: 10em;*/
+}
+
+.txtAlignCenter {
+    text-align:center:
+}
+
+#searchBetsResult thead th, #MainContent_BrowseBetsGridView th {
+	padding-bottom:0.2em;
+}
+
+
+.tableTdBig { 
+	width:25em;
+}
+
+.tableTdMedium {
+	width:15em;
+}
+
+.tableTdSmall {
+	width:5em;
+}
+
+#searchBetsResult a{
+	color:#16A085;
+}
+
+#searchBetsResult tbody tr:hover, #MainContent_BrowseBetsGridView tbody tr:hover {
+	color:#16A085;
+}
+
+#searchBetsResult tbody td, #MainContent_BrowseBetsGridView tbody td {
+	padding:0.3em 0.2em 0.5em 0;
+	font-size:1.1em;
+	border-bottom:1px gray solid;
+}
+
+/*END BROWSE BETS*/
+
+/*START CREATE BET*/
+
+#createBet {
+	position:relative;
+  	margin-left:auto;
+  	margin-right:auto;
+	width:75%;
+	height:30em;
+	/*border:2px black solid;*/
+	/*margin:1em 0 0 18em;*/
+}
+
+#createBetForm {
+	position:relative;
+}
+
+#createBet input {
+	padding:0.2em;
+}
+
+#createBet input:hover, #createBet input:focus, #createBet textarea:hover, #createBet textarea:focus {
+	background-color: #FFF0E6;
+}
+
+div.column  {
+	position:relative;
+	display:block;
+	width:49%;
+	/*border: 2px black solid;*/
+}
+
+div.row {
+	position:relative;
+	display:block;
+	width:100%;
+	height:3em;
+	/*border: 2px black solid;*/
+	padding: 0.5em;
+}
+
+div.col1 {
+	position: relative;
+	float: left;
+	width:5em;
+	margin-right:2em;
+	text-align: right;
+}
+
+div.col2 {
+	position: relative;
+	float: left;
+}
+
+div.col2 input {
+	width:100%;
+	float:left;
+}
+
+div.desc {
+	height:6em;
+}
+
+div.col2 .opponentInput {
+	width:65%;
+	margin:0 0.5em 0 0;
+}
+
+#addRule {
+	width:80%;
+	float:left;
+	margin:1em -0.2em 0 0;
+	display: block;
+	position:relative;
+	left:-0.7em;
+}
+
+.addRuleButton {
+	float:left; 
+	margin-top:1em;
+}
+
+.addButton {
+	float:left;
+}
+
+.rule{
+	position: relative;
+	float:left;
+	margin: 0.5em 0 0 -0.5em;
+	padding:0.2em;	
+	width:90%;
+}
+
+.rule:hover {
+	background-color:	#E0E0D1;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	border-radius: 0.2em;	
+}
+
+.opponent {
+	position: relative;
+	float:left;
+	margin: 0.5em 0 0 0;
+	padding:0.2em;	
+	width:90%;
+	z-index: 10;
+}
+
+.opponent:hover {
+	background-color:#E0E0D1;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	border-radius: 0.2em;	
+}
+
+.deleteRule, .deleteOpp {
+	position:relative;
+	float:right;
+	color:red;
+	right:0.3em;
+	font-size: 1em;
+	cursor:pointer;
+}
+
+input#createBetButton {
+	display:block;
+	position: relative;
+	top:20em;
+	right:2em;
+	float:right;
+}
+
+.rewards {
+	position: relative;
+	left:7.2em;
+}
+
+#getRewardsButton {
+	position: relative;
+	left:1em;
+	width:6.4em;
+}
+
+.rewardLabel {
+    position:relative;
+    display:block;
+}
+
+/*END CREATE BET*/
+
+/*START PROFILE*/
+
+.userImg {
+	display:block;
+	position: relative;
+	float: left;
+	margin:0 1em 0 0;	
+}
+
+.editAccImg {
+	height:30px;
+	width:30px;
+	position: absolute;
+	margin:8em 0 0 8.5em;
+	display:block;
+	cursor: pointer;
+
+}
+
+#editAccImgUpload {
+	opacity:0;
+}
+
+table#profileTable {
+	/*border:2px black solid;*/
+	float:left;
+	margin:0 10em 0 1.5em;
+	font-size: 1.1em;
+}
+
+.tableTdProfile {
+	width:7em;
+	height:2em;
+}
+
+table#profileLastBets {
+	font-size: 1.1em;
+}
+
+table#profileLastBets .tableTdProfile {
+	width:10em;
+	height:2em;
+}
+
+/*END PROFILE*/
+
+/*START MY ACCOUNT*/
+
+#editAcc .col1 {
+	width:9em;
+}
+
+#editAcc .row {
+	height: 2em;
+}
+
+input#editAccButton, input#regAccButton {
+	float:right;
+	position: relative;
+	right:3.7em;
+}
+
+.editAccPwdError {
+	font-size: 0.8em;
+	color:red;
+	visibility:hidden;
+	display:block;
+}
+
+/*END MY ACCOUNT*/
+
+/*START LOGOUT*/
+
+#logout {
+	text-align: center;
+}
+
+#logout h1 {
+	position: relative;
+	margin-top:3em;
+}
+
+/*END LOGOUT*/
+
+/*START LOGIN*/
+
+#loginForm {
+	width:23em;
+	margin:5em auto 0 auto;
+}
+
+#loginForm .column {
+	width:100%;
+}
+
+#loginButton {
+	margin:0 auto 1em auto;
+}
+
+#loginPage {
+	text-align: center;
+}
+
+.loginRememberMe {
+	position: relative;
+	margin:-1.2em 0 1em 0;
+}
+
+.errorLogin {
+	color:red;
+}
+
+#MainContent_errLoginLabel {
+    color:red;
+    margin-top:1em;
+    display:block;
+    position:relative;
+}
+
+/*END LOGIN*/
+
+#geoIPForm {
+    margin-bottom: 1em;
+    font-size:1.5em;
+    color:red;
+    background-color:#2F4154;
+    width:100%;
+    height:3em;
+}
+
+.geoLabel {
+    position:relative;
+    display:block;
+    width:100%;
+    text-align:center;
+}

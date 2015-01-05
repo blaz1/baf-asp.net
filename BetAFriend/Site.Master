@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BetAFriend.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <meta charset="utf-8">
+
+    <meta name="description" content="Bet against your friends in everyday life">
+    <meta name="author" content="Blaz Artac">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Scripts/main.js"></script>
+    <link rel="stylesheet" href="Content/styles.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+
+
+        	<nav id="topNav">
+                <!--<asp:ContentPlaceHolder ID="NavigationContentPlaceholder" runat="server">
+                </asp:ContentPlaceHolder>-->
+            <div id="homePage"><a href="Default.aspx">Bet A Friend</a></div>
+		    <div id="mainNav">
+			    <a href="browse-bets.aspx">Browse</a>
+                <asp:Label runat="server" ID="createLabel"></asp:Label>
+		    </div>
+		    <ul id="profileNav">
+                <asp:Label runat="server" ID="loginLabel"></asp:Label>
+                <asp:Label runat="server" ID="profileLabel"></asp:Label>
+		    </ul>
+	</nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    <footer>
+        <form id="geoIPForm" runat="server">
+            <asp:Label runat="server" ID="countryName" CssClass="geoLabel"></asp:Label>
+            <asp:Label runat="server" ID="countryCode" CssClass="geoLabel"></asp:Label>
+        </form>
+    </footer>
+
+</body>
+</html>
