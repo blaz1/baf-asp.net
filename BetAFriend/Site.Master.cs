@@ -84,13 +84,13 @@ namespace BetAFriend
                 Debug.Print("logged out at the moment");
                 loginLabel.Text = "<li id='dropdown'><a href='login.aspx'>Login</a></li>";
             }
-            String s = HttpContext.Current.Request.UserHostAddress;
+            String ip = HttpContext.Current.Request.UserHostAddress;
             net.webservicex.www.GeoIPService myProxy = new net.webservicex.www.GeoIPService(); // proxy object
             //string result = myProxy.GetGeoIP("64.106.166.130").ToString();
 
             net.webservicex.www.GeoIP resultList = new net.webservicex.www.GeoIP();
 
-            resultList = myProxy.GetGeoIP("64.106.166.130");
+            resultList = myProxy.GetGeoIP(ip);
             countryName.Text = resultList.CountryName;
             countryCode.Text = resultList.CountryCode;
             //sIP.Text = resultList.IP;      

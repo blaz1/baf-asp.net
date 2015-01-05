@@ -605,12 +605,14 @@ input#editAccButton, input#regAccButton {
 /*END LOGIN*/
 
 #geoIPForm {
-    margin-bottom: 1em;
-    font-size:1.5em;
-    color:red;
+    font-size:1em;
+    position:relative;
+    display;block;
+    padding:0.2em 0 0.2em 0;
     background-color:#2F4154;
+    color:white;
     width:100%;
-    height:3em;
+    height:2em;
 }
 
 .geoLabel {
